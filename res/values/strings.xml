@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">WiFi Keyguard</string>
+    <string name="help_text">Select the networks to disable lockscreen for:</string>
 </resources>

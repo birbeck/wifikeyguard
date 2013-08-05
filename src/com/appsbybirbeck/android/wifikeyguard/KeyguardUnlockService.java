@@ -17,13 +17,13 @@ public class KeyguardUnlockService extends Service {
     public void onCreate() {
         final KeyguardManager keyguardManager = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
         keyguardLock = keyguardManager.newKeyguardLock(TAG);
-        keyguardLock.disableKeyguard();
-        Log.d(TAG, "Keyguard unlocked.");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d(TAG, "Starting up " + startId + ".");
+        Log.d(TAG, "Starting up [ " + startId + " ].");
+        keyguardLock.disableKeyguard();
+        Log.d(TAG, "Keyguard unlocked.");
         return START_STICKY;
     }
 
